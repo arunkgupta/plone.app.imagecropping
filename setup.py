@@ -1,34 +1,35 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
 
-version = '1.3-dev0'
+
+version = '2.0b2.dev0'
 
 setup(
     name='plone.app.imagecropping',
     version=version,
-    description="allows images to be manually cropped using JCrop JS library",
+    description='Crops Images in Plone manually using cropper JS library',
     long_description='\n\n'.join([
         open('README.rst').read(),
         open('CONTRIBUTORS.rst').read(),
         open('CHANGES.rst').read(),
     ]),
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Environment :: Web Environment",
-        "Framework :: Plone",
-        "Framework :: Plone :: 4.2",
-        "Framework :: Plone :: 4.3",
-        "Intended Audience :: End Users/Desktop",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "Operating System :: OS Independent",
-        "Programming Language :: JavaScript",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
-        "Topic :: Software Development :: Libraries :: Python Modules",
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Framework :: Plone',
+        'Framework :: Plone :: 5.0',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+        'Operating System :: OS Independent',
+        'Programming Language :: JavaScript',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     keywords='plone image crop',
-    author='',
-    author_email='',
+    author='Plone Collective',
+    author_email='plone-developers@lists.sourceforge.net',
     url='https://github.com/collective/plone.app.imagecropping',
     license='GPLv2',
     packages=find_packages('src'),
@@ -37,37 +38,13 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Acquisition',
-        'Pillow',
-        'plone.app.blob',
-        'plone.app.imaging',
-        'plone.app.registry',
-        'plone.behavior',
-        'plone.namedfile>=2.0.1',
-        'plone.registry',
-        'plone.scale',
-        'Products.CMFCore',
-        'Products.CMFPlone>=4.2'
-        'Products.GenericSetup',
+        'Products.CMFPlone>5.0.2',
         'setuptools',
-        'zope.component',
-        'zope.globalrequest',
-        'zope.interface',
-        'zope.lifecycleevent',
-        'zope.schema',
     ],
     extras_require={
         'test': [
-            'AccessControl',
-            'plone.app.dexterity',
-            'plone.app.robotframework',
-            'plone.app.testing[robot]>=4.2.2',
-            'plone.testing',
-            'robotsuite',
-            'zope.event',
-        ],
-        'archetypes': [
-            'Products.ATContentTypes',
+            'plone.app.testing',
+            'plone.app.robotframework[debug]',
         ],
     },
     entry_points="""

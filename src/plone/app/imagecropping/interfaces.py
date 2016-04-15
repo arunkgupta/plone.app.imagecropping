@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
+from zope.component.interfaces import IObjectEvent
 from zope.interface.interface import Interface
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+
+
+class IPloneAppImagecroppingLayer(IDefaultBrowserLayer):
+    """Marker interface that defines a browser layer."""
 
 
 class IImageCroppingMarker(Interface):
@@ -40,6 +46,15 @@ class IImageCroppingUtils(Interface):
             plone.scale.storage.AnnotationStorage, so that it is available
             in plone.app.imaging @@images view
         """
+
+
+class ICroppingInfoChangedEvent(IObjectEvent):
+    """ event after cropping information has changed """
+
+
+class ICroppingInfoRemovedEvent(IObjectEvent):
+    """ event after cropping information has changed """
+
 
 # seems unused
 # class ICroppedImageScaling(IImageScaling):

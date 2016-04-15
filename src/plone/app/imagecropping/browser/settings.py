@@ -6,8 +6,8 @@ from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.z3cform import layout
 from z3c.form import form
 from zope import schema
-from zope.interface import Interface
 from zope.interface import implementer
+from zope.interface import Interface
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 
@@ -39,7 +39,7 @@ class ISettings(Interface):
     )
 
     constrain_cropping = schema.Bool(
-        title=_(u'Enable to constrain cropable scales'),
+        title=_(u'Enable to constrain croppable scales'),
         description=_(u'Enable to reduce the scales shown for cropping in the '
                       u'list of scales with crop support.'),
         default=False,

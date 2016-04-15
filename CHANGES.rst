@@ -1,8 +1,56 @@
 Changelog
 =========
 
-1.3 (unreleased)
+2.0b2 (unreleased)
+------------------
+
+- Give IImageCroppingBehavior a shortname.
+  [jensens]
+
+
+2.0b1 (2016-03-29)
+------------------
+
+- Run i18ndude and translated new/missing strings to German.
+  [jensens]
+
+- Use more modern cropper Javascript library, kick out JCrop and rewrite all JS.
+  It uses patterns now to initialize the cropper and image selections.
+  [jensens]
+
+- Code refactoring and big overhaul to make it work with Plone 5 (only) and the new JS.
+  [jensens]
+
+- Housekeeping: upgrades at one place, zca decorators, travis caching
+  [jensens]
+
+- Added more Dutch translations.
+  [maurits]
+
+- Added French translations.
+  [laulaz]
+
+
+1.3 (2015-12-10)
 ----------------
+
+- introduce Changed/Removed events after editing cropping information
+  [petschki]
+
+- remove initial content scrolling (aka location.hash)
+  [petschki]
+
+- Use "application/javascript" media type instead of the obsolete "text/javascript".
+  [hvelarde]
+
+- fix direction='down' handling. Deliver cropped scale if we have one.
+  [petschki]
+
+- Purge proxy caches if needed on crop.
+  [alecm]
+
+- Fix issue with crops disappearing for non-blob images (e.g. ATNewsItem images)
+  [alecm]
 
 - Refactor upgrade step to reduce memory consumption and avoid restarts on instances running with supervisor's memmon.
   [hvelarde]
